@@ -1,0 +1,14 @@
+{
+  "name": "workspace-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix \"stage projects\" run dev",
+    "install": "npm --prefix \"stage projects\" install",
+    "build": "npm --prefix \"stage projects\" run build",
+    "preview": "npm --prefix \"stage projects\" run preview"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
+}

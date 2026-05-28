@@ -1,6 +1,35 @@
-// Minimal router placeholder. If you install vue-router, you can enable this file.
-export const routes = [
-  { path: '/', name: 'Home', component: () => import('../views/HomeView.vue') },
+import { createRouter, createWebHistory } from "vue-router";
+import Home from '../views/Home.vue'
+import About from "../views/about.vue";
+import services from "../views/services.vue";
+import Contact from "../views/contact.vue";
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name:'about',
+     component: About,
+  },
+  {
+    path: '/services',
+    name:'services',
+     component: services,
+  },
+  {
+    path: '/contact',
+    name:'contact',
+     component: Contact,
+  },
+ 
 ]
 
-export default routes
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+export default router

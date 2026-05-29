@@ -1,29 +1,104 @@
 <template>
-  <nav class="bg-green-800 text-white p-2 flex justify-between items-center">
-    <img src="../public/logo.png" class="h-10 w-10 rounded-full object-cover">
+  <nav class="bg-green-800 text-white px-6 py-3 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <img
+      src="/logo.png"
+      alt="Logo"
+      class="h-10 w-10 rounded-full object-cover"
+    />
 
- <ul class="flex gap-8 text-smm font-medium">
-  <li> <a href="/" class="hover:text-yellow-300">Home</a> </li>
-  <li> <a href="/about" class="hover:text-yellow-300">About us</a> </li>
-  <li> <a href="/services" class="hover:text-yellow-300">Services</a> </li>
+    <!-- Navigation Links -->
+    <ul class="flex gap-8 text-sm font-medium items-center">
+      
+      <li>
+        <a href="/" class="hover:text-yellow-300 transition">
+          Home
+        </a>
+      </li>
 
-  <li class="relative group"> <a href="#" class="hover:text-yellow-300">Gallery🔽</a><span></span>
- <ul class="invisible group-hover:visible opacity absolute bg-white text-green-900 rounded shadow w-48 top-full z-50">
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">photos</a> </li>
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">videos</a> </li>
-  </ul>
-  </li>
+      <li>
+        <a href="/about" class="hover:text-yellow-300 transition">
+          About Us
+        </a>
+      </li>
 
-  <li class="relative group"> <a href="#" class="hover:text-yellow-300">Destination🔽</a><span></span>
+      <li>
+        <a href="/services" class="hover:text-yellow-300 transition">
+          Services
+        </a>
+      </li>
 
-  <ul class="invisible group-hover:visible opacity absolute bg-white text-green-900 rounded shadow w-48 top-full z-50">
-  <li><a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">Kigali city</a> </li>
-  <li><a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">Western province</a> </li>
-  <li><a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">Northern province</a> </li>
-  <li><a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">southern province</a> </li>
-  </ul>
-  </li>
-  <li> <a href="/contact" class="hover:text-yellow-300">Contact</a> </li></ul>
+      <!-- Gallery Dropdown -->
+      <li class="relative group">
+        <a href="#" class="hover:text-yellow-300 transition">
+          Gallery ▼
+        </a>
 
-</nav>
+        <ul
+          class="absolute left-0 top-full hidden group-hover:block bg-white text-green-900 rounded shadow-md w-48 z-50"
+        >
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-green-200 text-green-700"
+            >
+              Photos
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-green-200 text-green-700"
+            >
+              Videos
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Destination Dropdown -->
+      <li class="relative group">
+        <a href="#" class="hover:text-yellow-300 transition">
+          Destination ▼
+        </a>
+
+        <ul
+          class="absolute left-0 top-full hidden group-hover:block bg-white text-green-900 rounded shadow-md w-52 z-50"
+        >
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">
+              Kigali City
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">
+              Western Province
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">
+              Northern Province
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-green-200 text-green-700">
+              Southern Province
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/contact" class="hover:text-yellow-300 transition">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+  </nav>
 </template>

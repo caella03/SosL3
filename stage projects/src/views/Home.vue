@@ -4,28 +4,111 @@
 <template>
   <!-- Hero Section -->
   <section
-    class="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
-    style="background-image: url('/src/assets/rwanda.png');"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden"
   >
-    
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- Background Image -->
+    <div
+      class="absolute inset-0 bg-cover bg-center scale-105"
+      style="background-image: url('/rwanda.png');"
+    ></div>
 
-    <!-- Content -->
-    <div class="relative text-center px-4 z-10">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-wide">
-        MAP OF RWANDA
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-green-900/40"
+    ></div>
+
+    <!-- Decorative Blur -->
+    <div
+      class="absolute top-20 left-10 w-72 h-72 bg-yellow-400/20 rounded-full blur-3xl"
+    ></div>
+
+    <div
+      class="absolute bottom-10 right-10 w-96 h-96 bg-green-500/20 rounded-full blur-3xl"
+    ></div>
+
+    <!-- Hero Content -->
+    <div
+      class="relative z-10 text-center px-6 max-w-5xl mx-auto"
+    >
+      <!-- Badge -->
+      <span
+        class="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-sm md:text-base font-medium text-yellow-300 mb-6"
+      >
+        Explore the Heart of Africa
+      </span>
+
+      <!-- Heading -->
+      <h1
+        class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-6"
+      >
+        Discover
+        <span class="text-yellow-400">
+          Rwanda
+        </span>
       </h1>
 
-      <p class="text-lg md:text-2xl mb-6 max-w-2xl mx-auto">
-        Discover the beauty, culture, and amazing destinations across Rwanda.
+      <!-- Description -->
+      <p
+        class="text-lg md:text-2xl text-gray-200 leading-8 max-w-3xl mx-auto mb-10"
+      >
+        Experience breathtaking hills, vibrant culture, wildlife adventures,
+        and unforgettable destinations across the beautiful land of Rwanda.
       </p>
 
-      <button
-        class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full transition duration-300"
+      <!-- Buttons -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center items-center"
       >
-        Explore Now
-      </button>
+        <button
+          class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition duration-300"
+        >
+          Explore Now
+        </button>
+
+        <button
+          class="border border-white/40 hover:bg-white hover:text-black text-white font-semibold px-8 py-4 rounded-full backdrop-blur-md transition duration-300"
+        >
+          Learn More
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <div
+        class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
+      >
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6"
+        >
+          <h3 class="text-3xl font-bold text-yellow-400 mb-2">
+            1000+
+          </h3>
+          <p class="text-gray-200">
+            Beautiful Hills
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6"
+        >
+          <h3 class="text-3xl font-bold text-yellow-400 mb-2">
+            4
+          </h3>
+          <p class="text-gray-200">
+            National Parks
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6"
+        >
+          <h3 class="text-3xl font-bold text-yellow-400 mb-2">
+            Endless
+          </h3>
+          <p class="text-gray-200">
+            Travel Experiences
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>

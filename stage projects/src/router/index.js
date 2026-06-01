@@ -1,62 +1,63 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from '../views/Home.vue'
-import About from "../views/about.vue";
-import services from "../views/services.vue";
-import Contact from "../views/contact.vue";
-import NorthernProvince from "../views/provinces/NorthernProvince.vue";
-import SouthernProvince from "../views/provinces/SouthernProvince.vue";
-import EasternProvince from "../views/provinces/EasternProvince.vue";
-import WesternProvince from "../views/provinces/WesternProvince.vue";
+import { createRouter, createWebHistory } from "vue-router"
+
+import Home from "../views/Home.vue"
+import About from "../views/About.vue"
+import Services from "../views/Services.vue"
+import Contact from "../views/Contact.vue"
+
+import NorthernProvince from "../views/provinces/NorthernProvince.vue"
+import SouthernProvince from "../views/provinces/SouthernProvince.vue"
+import EasternProvince from "../views/provinces/EasternProvince.vue"
+import WesternProvince from "../views/provinces/WesternProvince.vue"
+
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home
   },
   {
-    path: '/about',
-    name:'about',
-     component: About,
+    path: "/about",
+    name: "About",
+    component: About
   },
   {
-    path: '/services',
-    name:'services',
-     component: services,
+    path: "/services",
+    name: "Services",
+    component: Services
   },
   {
-    path: '/contact',
-    name:'contact',
-     component: Contact,
+    path: "/contact",
+    name: "Contact",
+    component: Contact
   },
+
   {
-    path: '/provinces',
-    name: 'provinces',
-    // parent page for provinces
-    component: {
-      template: '<router-view />'
-    }
-  },
-  {
-    path: '/provinces/north',
-    name: 'NorthernProvince',
-    component: NorthernProvince,
-  },
-  {
-    path: '/provinces/east',
-    name: 'EasternProvince',
-    component: EasternProvince,
-  },
-  {
-    path: '/provinces/south',
-    name: 'SouthernProvince',
-    component: SouthernProvince,
-  },
-  {
-    path: '/provinces/west',
-    name: 'WesternProvince',
-    component: WesternProvince,
-  },
- 
+    path: "/provinces",
+    component: () => import("../views/ProvincesLayout.vue"),
+    children: [
+      {
+        path: "north",
+        name: "NorthernProvince",
+        component: NorthernProvince
+      },
+      {
+        path: "east",
+        name: "EasternProvince",
+        component: EasternProvince
+      },
+      {
+        path: "south",
+        name: "SouthernProvince",
+        component: SouthernProvince
+      },
+      {
+        path: "west",
+        name: "WesternProvince",
+        component: WesternProvince
+      }
+    ]
+  }
 ]
 
 const router = createRouter({

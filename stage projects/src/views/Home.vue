@@ -1,4 +1,6 @@
 <script setup>
+import useI18n from '@/i18n'
+const { t } = useI18n()
 </script>
 
 <template>
@@ -34,16 +36,16 @@
       <span
         class="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-sm md:text-base font-medium text-yellow-300 mb-6"
       >
-        Explore the Heart of Africa
+        {{ t('exploreBadge') }}
       </span>
 
       <!-- Heading -->
       <h1
         class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-6"
       >
-        Discover
+        {{ t('discover') }}
         <span class="text-yellow-400">
-          Rwanda
+          {{ t('rwanda') }}
         </span>
       </h1>
 
@@ -51,8 +53,7 @@
       <p
         class="text-lg md:text-2xl text-gray-200 leading-8 max-w-3xl mx-auto mb-10"
       >
-        Experience breathtaking hills, vibrant culture, wildlife adventures,
-        and unforgettable destinations across the beautiful land of Rwanda.
+  {{ t('description') }}
       </p>
 
       <!-- Buttons -->
@@ -62,13 +63,13 @@
         <button
           class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition duration-300"
         >
-          Explore Now
+          {{ t('exploreNow') }}
         </button>
 
         <button
           class="border border-white/40 hover:bg-white hover:text-black text-white font-semibold px-8 py-4 rounded-full backdrop-blur-md transition duration-300"
         >
-          Learn More
+          {{ t('learnMore') }}
         </button>
       </div>
 
@@ -79,33 +80,33 @@
         <div
           class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6"
         >
-          <h3 class="text-3xl font-bold text-yellow-400 mb-2">
-            1000+
+            <h3 class="text-3xl font-bold text-yellow-400 mb-2">
+            {{ t('stats1val') }}
           </h3>
           <p class="text-gray-200">
-            Beautiful Hills
+            {{ t('stats1label') }}
           </p>
         </div>
 
         <div
           class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6"
         >
-          <h3 class="text-3xl font-bold text-yellow-400 mb-2">
-            4
+            <h3 class="text-3xl font-bold text-yellow-400 mb-2">
+            {{ t('stats2val') }}
           </h3>
           <p class="text-gray-200">
-            National Parks
+            {{ t('stats2label') }}
           </p>
         </div>
 
         <div
           class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6"
         >
-          <h3 class="text-3xl font-bold text-yellow-400 mb-2">
-            Endless
+            <h3 class="text-3xl font-bold text-yellow-400 mb-2">
+            {{ t('stats3val') }}
           </h3>
           <p class="text-gray-200">
-            Travel Experiences
+            {{ t('stats3label') }}
           </p>
         </div>
       </div>

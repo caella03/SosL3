@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "stage projects/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "./(.*)", "dest": "/index.html" }
+  ],
+  "outputDirectory": "stage projects/dist"
+}

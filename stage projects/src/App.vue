@@ -1,11 +1,18 @@
 <script setup>
-import { RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import { RouterView, useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+const route = useRoute()
+
+const hideLayout = computed(() =>
+  ['dashboard'].includes(route.name?.toString())
+)
 </script>
 
 <template>
-  <Navbar />
+  <Navbar v-if="!hideLayout" />
   <RouterView />
-  <Footer />
-</template>
+  <Footer v-if="!hideLayout" />
+</template> 

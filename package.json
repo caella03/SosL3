@@ -8,7 +8,6 @@
     "preview": "npm --prefix \"stage projects\" run preview"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.0",
     "tailwindcss": "^4.3.0",
     "vue-router": "^5.0.7"
   }

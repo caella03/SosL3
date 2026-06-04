@@ -22,8 +22,8 @@ const { t } = useI18n()
 
       <div class="bg-white p-8 rounded-xl shadow">
         <h2 class="text-xl font-bold mb-4">Get In Touch</h2>
-        <p>Email: info@rwanda-tour.com</p>
-        <p>Phone: +250 7XX XXX XXX</p>
+        <p>Email: temberaurwanda@rwanda-tour.com</p>
+        <p>Phone: +250 789976099</p>
       </div>
 
     </div>

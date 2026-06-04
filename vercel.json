@@ -11,6 +11,5 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "outputDirectory": "stage projects/dist"
+  ]
 }
